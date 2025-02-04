@@ -53,8 +53,19 @@ int main() {
     add_repeating_timer_ms(3000, repeating_timer_callback, NULL, &timer);
     
     while (true) {
-        printf("Semáforo funcionando...\n");
+        switch (state) {
+            case 0:
+                printf("Estado atual: Sinal Vermelho ligado: Pare.\n");
+                break;
+            case 1:
+                printf("Estado atual: Sinal Amarelo ligado: Atenção.\n");
+                break;
+            case 2:
+                printf("Estado atual: Sinal Verde ligado: Prossiga, caminho livre.\n");
+                break;
+        }
         sleep_ms(1000);
     }
 }
+
 
