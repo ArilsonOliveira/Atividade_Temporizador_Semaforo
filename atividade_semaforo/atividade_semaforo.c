@@ -3,7 +3,7 @@
 #include "hardware/timer.h"
 
 #define LED_RED 13
-#define LED_YELLOW 12 // converter o azul para amarelo
+#define LED_YELLOW 12 //  amarelo representado por azul
 #define LED_GREEN 11
 
 volatile int state = 0;
@@ -50,7 +50,7 @@ int main() {
     gpio_put(LED_GREEN, 0);
     
     struct repeating_timer timer;
-    add_repeating_timer_ms(3000, repeating_timer_callback, NULL, &timer);
+    add_repeating_timer_ms(3000, repeating_timer_callback, NULL, &timer); // função responsável por chamar a rotina do temporizador
     
     while (true) {
         switch (state) {
