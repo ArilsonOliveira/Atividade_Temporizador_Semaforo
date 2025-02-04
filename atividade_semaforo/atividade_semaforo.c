@@ -55,13 +55,13 @@ int main() {
     while (true) {
         switch (state) {
             case 0:
-                printf("Estado atual: Sinal Vermelho ligado: Pare.\n");
+                printf("Sinal Vermelho ligado: Pare.\n");
                 break;
             case 1:
-                printf("Estado atual: Sinal Amarelo ligado: Atenção.\n");
+                printf("Sinal Amarelo ligado: Atenção.\n");
                 break;
             case 2:
-                printf("Estado atual: Sinal Verde ligado: Prossiga, caminho livre.\n");
+                printf("Sinal Verde ligado: Prossiga, caminho livre.\n");
                 break;
         }
         sleep_ms(1000);
